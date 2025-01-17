@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Book Container */
+.book {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+/* Cover Page */
+.cover {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/cover-bg.jpg');
+    /* Background image for the cover */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-content {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cover-image {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.cover-title {
+    color: #ff6f61;
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Spread Styles */
+.spread {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s;
+}
+
+.spread:not(:first-child) {
+    transform: translateX(100%);
+}
+
+/* Page Styles */
+.page {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page.left {
+    border-right: 1px solid #ccc;
+}
+
+.page.right {
+    border-left: 1px solid #ccc;
+}
+
+/* Content Styles */
+h1 {
+    color: #ff6f61;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #333;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Navigation Buttons */
+.navigation {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #ff3b2f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .book {
+        width: 95%;
+        height: 90vh;
+    }
+
+    .cover-title {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    img {
+        max-height: 150px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
