@@ -1,3 +1,6 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 /* General Styles */
 body {
     margin: 0;
@@ -8,12 +11,8 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f9f9f9;
-    font-family: 'Fredoka One', cursive;
-    /* Kid-friendly font */
+    font-family: 'Fredoka One', cursive, sans-serif; /* Kid-friendly font with fallback */
 }
-
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 /* Book Container */
 .book {
@@ -74,30 +73,24 @@ body {
 
 .cover-title {
     color: #ff6f61;
-    font-size: 2.5em;
-    /* Larger font size */
+    font-size: 2.5em; /* Larger font size */
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    /* Add shadow for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
 }
 
 /* Content Styles */
 h1 {
     color: #ff6f61;
-    font-size: 2em;
-    /* Larger font size */
+    font-size: 2em; /* Larger font size */
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    /* Add shadow for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
 }
 
 p {
     color: #333;
-    font-size: 1.2em;
-    /* Larger font size */
+    font-size: 1.2em; /* Larger font size */
     margin: 10px 0;
-    line-height: 1.6;
-    /* Improve readability */
+    line-height: 1.6; /* Improve readability */
 }
 
 img {
@@ -119,14 +112,11 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 1.2em;
-    /* Larger font size */
+    font-size: 1.2em; /* Larger font size */
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Fredoka One', cursive;
-    /* Kid-friendly font */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    /* Add shadow for better visibility */
+    font-family: 'Fredoka One', cursive, sans-serif; /* Kid-friendly font with fallback */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
 }
 
 button:hover {
@@ -141,18 +131,15 @@ button:hover {
     }
 
     .cover-title {
-        font-size: 2em;
-        /* Adjust for smaller screens */
+        font-size: 2em; /* Adjust for smaller screens */
     }
 
     h1 {
-        font-size: 1.5em;
-        /* Adjust for smaller screens */
+        font-size: 1.5em; /* Adjust for smaller screens */
     }
 
     p {
-        font-size: 1em;
-        /* Adjust for smaller screens */
+        font-size: 1em; /* Adjust for smaller screens */
     }
 
     img {
@@ -161,7 +148,6 @@ button:hover {
 
     button {
         padding: 8px 16px;
-        font-size: 1em;
-        /* Adjust for smaller screens */
+        font-size: 1em; /* Adjust for smaller screens */
     }
 }
