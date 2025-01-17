@@ -13,35 +13,52 @@ body {
 
 /* Book Container */
 .book {
-    display: flex;
     width: 90%;
-    max-width: 1200px;
+    max-width: 800px;
     height: 80vh;
-    overflow: hidden;
     position: relative;
-    border: 2px solid #ccc;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Page Styles */
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.page.active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Cover Page */
 .cover {
-    width: 100%;
-    height: 100%;
     background-image: url('images/cover-bg.jpg');
-    /* Background image for the cover */
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .cover-content {
-    text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
-    /* Semi-transparent background */
     padding: 20px;
     border-radius: 10px;
 }
@@ -55,42 +72,6 @@ body {
     color: #ff6f61;
     font-size: 2em;
     margin: 0;
-}
-
-/* Spread Styles */
-.spread {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 1s;
-}
-
-.spread:not(:first-child) {
-    transform: translateX(100%);
-}
-
-/* Page Styles */
-.page {
-    width: 50%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.page.left {
-    border-right: 1px solid #ccc;
-}
-
-.page.right {
-    border-left: 1px solid #ccc;
 }
 
 /* Content Styles */
@@ -116,6 +97,8 @@ img {
 /* Navigation Buttons */
 .navigation {
     margin-top: 20px;
+    display: flex;
+    gap: 10px;
 }
 
 button {
@@ -126,7 +109,6 @@ button {
     font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 10px;
 }
 
 button:hover {

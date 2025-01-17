@@ -1,32 +1,28 @@
-let currentSpread = 0; // Start with the cover page
-const totalSpreads = 5;
+let currentPage = 0;
+const totalPages = 10;
 
-function showSpread(spreadNumber) {
-    const spreads = document.querySelectorAll('.spread');
-    spreads.forEach((spread, index) => {
-        if (index === spreadNumber) {
-            spread.style.transform = 'translateX(0)';
-        } else if (index < spreadNumber) {
-            spread.style.transform = 'translateX(-100%)';
+function showPage(pageNumber) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach((page, index) => {
+        if (index === pageNumber) {
+            page.classList.add('active');
         } else {
-            spread.style.transform = 'translateX(100%)';
+            page.classList.remove('active');
         }
     });
 }
 
-function nextSpread() {
-    if (currentSpread < totalSpreads) {
-        currentSpread++;
-        showSpread(currentSpread);
+function nextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
     }
 }
 
-function prevSpread() {
-    if (currentSpread > 0) {
-        currentSpread--;
-        showSpread(currentSpread);
-    }
+function goToCover() {
+    currentPage = 0; // Reset to the cover page
+    showPage(currentPage);
 }
 
-// Initialize the first spread (cover page)
-showSpread(currentSpread);
+// Initialize the first page (cover page)
+showPage(currentPage);
